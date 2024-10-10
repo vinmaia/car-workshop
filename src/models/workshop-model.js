@@ -1,5 +1,4 @@
 import { Schema, model } from "mongoose";
-import Maintenances from "../controllers/maintenance-controller.js";
 
 const workshopSchema = new Schema({
   name: {
@@ -17,7 +16,7 @@ const workshopSchema = new Schema({
   maintenances: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: Maintenances,
+    ref: "Maintenances",
   },
 });
 

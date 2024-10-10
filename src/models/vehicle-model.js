@@ -1,5 +1,4 @@
 import { Schema, model } from "mongoose";
-import Maintenances from "../controllers/maintenance-controller.js";
 
 const vehicleSchema = new Schema({
   plate: {
@@ -29,7 +28,7 @@ const vehicleSchema = new Schema({
   maintenances: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: Maintenances,
+    ref: "Maintenances",
   },
 });
 

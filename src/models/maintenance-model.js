@@ -1,17 +1,15 @@
 import { Schema, model } from "mongoose";
-import Workshop from "../controllers/workshop-controller.js";
-import Vehicle from "../controllers/vehicle-controller.js";
 
 const maintenancesSchema = new Schema({
   workshop: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: Workshop,
+    ref: "Workshop",
   },
   vehicle: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: Vehicle,
+    ref: "Vehicle",
   },
   services: [
     {
